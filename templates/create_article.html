@@ -1,17 +1,9 @@
-{% extends 'base.html' %}
+{% extends 'post_base.html' %}
 
 {% block title %}
 Add new article
 {% endblock %}
 
-{% block body %}
-<div class="container mt-5">
-    <h1>Add a new article</h1>
-    <form method="post">
-        <input type="text" name="title" id="title" class="form-control" placeholder="Input title"><br>
-        <textarea name="intro" id="intro" class="form-control" placeholder="Input intro"></textarea><br>
-        <textarea name="text" id="text" class="form-control" placeholder="Input text"></textarea><br>
-        <input type="submit" class="btn btn-success" value="Send">
-    </form>
-</div>
+{% block header %}
+Add a new article
 {% endblock %}

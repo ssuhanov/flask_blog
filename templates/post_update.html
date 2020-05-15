@@ -1,17 +1,21 @@
-{% extends 'base.html' %}
+{% extends 'post_base.html' %}
 
 {% block title %}
 Editing
 {% endblock %}
 
-{% block body %}
-<div class="container mt-5">
-    <h1>Editing</h1>
-    <form method="post">
-        <input type="text" name="title" id="title" class="form-control" value="{{ article.title }}" placeholder="Input title"><br>
-        <textarea name="intro" id="intro" class="form-control" placeholder="Input intro">{{ article.intro }}</textarea><br>
-        <textarea name="text" id="text" class="form-control" placeholder="Input text">{{ article.text }}</textarea><br>
-        <input type="submit" class="btn btn-success" value="Update">
-    </form>
-</div>
+{% block header %}
+Editing
+{% endblock %}
+
+{% block name_value%}
+value="{{ article.title }}"
+{% endblock %}
+
+{% block intro_value %}
+{{ article.intro }}
+{% endblock %}
+
+{% block text_value %}
+{{ article.text }}
 {% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>{% block header %}{% endblock %}</h1>
+    <form method="post">
+        <input type="text" name="title" id="title" class="form-control" {% block name_value%}{% endblock %} placeholder="Input title"><br>
+        <textarea name="intro" id="intro" class="form-control" placeholder="Input intro">{% block intro_value %}{% endblock %}</textarea><br>
+        <textarea name="text" id="text" class="form-control" placeholder="Input text">{% block text_value %}{% endblock %}</textarea><br>
+        <input type="submit" class="btn btn-success" value="Send">
+    </form>
+</div>
+{% endblock %}
