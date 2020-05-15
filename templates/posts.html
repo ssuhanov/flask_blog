@@ -8,6 +8,7 @@ All posts
 <div class="container mt-5">
     <h1>All posts</h1>
 
+    {% if articles|length > 0 %}
     {% for article in articles %}
     <div class="alert alert-info">
         <h2>{{ article.title }}</h2>
@@ -16,5 +17,9 @@ All posts
         <a href="/posts/{{ article.id }}" class="btn btn-warning">More...</a>
     </div>
     {% endfor %}
+    {% else %}
+    <p>No articles, tut mir leid...</p>
+    {% endif %}
+
 </div>
 {% endblock %}
